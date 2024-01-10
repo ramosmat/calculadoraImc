@@ -26,17 +26,7 @@ export default function RootLayout({
               <h1 className="font-bold text-3xl">Calculadora IMC</h1>
             </section>
           </nav>
-
-          <section className="py-20 px-28 w-10/12 max-w-3xl h-[700px] rounded-xl flex flex-col items-center bg-white">
-            <div className="w-96">
-              <div className="flex flex-col gap-5">{children}</div>
-            </div>
-            <input
-              type="button"
-              value="Calcular"
-              className="mt-6 h-10 bg-[#E85B81] w-96 rounded-xl text-white"
-            />
-          </section>
+          {children}
         </main>
       </body>
     </html>
