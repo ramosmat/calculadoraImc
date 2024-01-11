@@ -1,8 +1,8 @@
 "use client";
 
 import Dados from "../components/dados";
-import Inputs from "../components/input";
 import { useState, useEffect } from "react";
+import Linha from "../components/linha";
 
 export default function Home() {
   const [peso, setPeso] = useState(0);
@@ -15,11 +15,11 @@ export default function Home() {
   };
 
   return (
-    <section className="py-20 px-28 w-10/12 max-w-3xl h-[700px] rounded-xl flex flex-col items-center bg-white">
+    <section className="py-10 px-28 w-10/12 max-w-3xl h-[700px] rounded-xl flex flex-col items-center bg-white">
       <div className="w-96">
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-1">
-            <label>Peso</label>
+            <label className="text-[#505050]">Peso</label>
             <input
               type="number"
               placeholder="kg"
@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <label>Altura</label>
+            <label className="text-[#505050]">Altura</label>
             <input
               type="number"
               placeholder="m"
@@ -47,13 +47,68 @@ export default function Home() {
       </button>
 
       <section id="root" className="mt-10">
-        {/* Se imc maior que 0, faça o primeiro paragrafo */}
+        {/* Se imc maior que 0, faça o primeiro parenteses */}
         {imc > 0 ? (
           <Dados peso={peso} altura={altura} imc={imc} res={res} />
         ) : (
-          "Saiba agora se está no seu peso ideal!"
+          <div className="w-60">
+            <p className="text-[#ABABAB] text-xl text-center">
+              Saiba agora se está no seu peso ideal!
+            </p>
+          </div>
         )}
       </section>
+
+      <table className="mt-10 border border-[#c9c9c9] w-96">
+        <thead>
+          <tr className="bg-[#dfdfdf]">
+            <td className="text-[#E85B81] font-semibold pl-6">IMC</td>
+            <td className="text-[#E85B81] font-semibold">Classificação</td>
+          </tr>
+        </thead>
+        <tbody>
+          <Linha
+            bg="[#FFF]"
+            range={"Menos de 17"}
+            classe={"Muito abaixo do peso"}
+          />
+          <Linha
+            bg="[#dfdfdf]"
+            range={"Entre 17 e 18,49"}
+            classe={"Abaixo do peso"}
+          />
+
+          <Linha
+            bg="[#FFF]"
+            range={"Entre 18,5 e 24,99"}
+            classe={"Peso normal"}
+          />
+
+          <Linha
+            bg="[#dfdfdf]"
+            range={"Entre 25 e 29,99"}
+            classe={"Acima do peso"}
+          />
+
+          <Linha
+            bg="[#FFF]"
+            range={"Entre 30 e 34,99"}
+            classe={"Obesidade I"}
+          />
+
+          <Linha
+            bg="[#dfdfdf]"
+            range={"Entre 35 e 39,99"}
+            classe={"Obesidade II (severa)"}
+          />
+
+          <Linha
+            bg="[#FFF]"
+            range={"Acima de 40"}
+            classe={"Obesidade III (mórbida)"}
+          />
+        </tbody>
+      </table>
     </section>
   );
 }
