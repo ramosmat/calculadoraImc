@@ -15,9 +15,9 @@ export default function Home() {
   };
 
   return (
-    <section className="py-10 px-28 w-10/12 max-w-3xl h-[700px] rounded-xl flex flex-col items-center bg-white">
-      <div className="w-96">
-        <div className="flex flex-col gap-5">
+    <section className="py-10 md:px-28 w-10/12 max-w-3xl h-[700px] rounded-xl flex flex-col items-center bg-white">
+      <div className="w-72 md:w-96">
+        <div className="flex flex-col gap-3">
           <div className="flex flex-col gap-1">
             <label className="text-[#505050]">Peso</label>
             <input
@@ -41,12 +41,12 @@ export default function Home() {
       </div>
       <button
         onClick={handleSubmmit}
-        className="mt-6 h-10 hover:bg-[#E85B81] bg-[#f02d61] w-96 rounded-xl text-white"
+        className="mt-6 h-10 hover:bg-[#E85B81] bg-[#f02d61] w-72 md:w-96 rounded-xl text-white"
       >
         Calcular
       </button>
 
-      <section id="root" className="mt-10">
+      <section className="mt-10 w-72 md:w-96 flex justify-center">
         {/* Se imc maior que 0, faça o primeiro parenteses */}
         {imc > 0 ? (
           <Dados peso={peso} altura={altura} imc={imc} res={res} />
@@ -59,11 +59,13 @@ export default function Home() {
         )}
       </section>
 
-      <table className="mt-10 border border-[#c9c9c9] w-96">
+      <table className="mt-10 border border-[#c9c9c9] md:w-96">
         <thead>
           <tr className="bg-[#dfdfdf]">
-            <td className="text-[#E85B81] font-semibold pl-6">IMC</td>
-            <td className="text-[#E85B81] font-semibold">Classificação</td>
+            <td className="text-[#E85B81] font-semibold pl-2 md:pl-6">IMC</td>
+            <td className="text-[#E85B81] font-semibold pl-2 md:pl-0">
+              Classificação
+            </td>
           </tr>
         </thead>
         <tbody>
@@ -74,31 +76,27 @@ export default function Home() {
           />
           <Linha
             bg="[#dfdfdf]"
-            range={"Entre 17 e 18,49"}
+            range={"Entre 17 e 18,4"}
             classe={"Abaixo do peso"}
           />
 
           <Linha
             bg="[#FFF]"
-            range={"Entre 18,5 e 24,99"}
+            range={"Entre 18,5 e 24,9"}
             classe={"Peso normal"}
           />
 
           <Linha
             bg="[#dfdfdf]"
-            range={"Entre 25 e 29,99"}
+            range={"Entre 25 e 29,9"}
             classe={"Acima do peso"}
           />
 
-          <Linha
-            bg="[#FFF]"
-            range={"Entre 30 e 34,99"}
-            classe={"Obesidade I"}
-          />
+          <Linha bg="[#FFF]" range={"Entre 30 e 34,9"} classe={"Obesidade I"} />
 
           <Linha
             bg="[#dfdfdf]"
-            range={"Entre 35 e 39,99"}
+            range={"Entre 35 e 39,9"}
             classe={"Obesidade II (severa)"}
           />
 

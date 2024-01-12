@@ -13,19 +13,19 @@ export default function Dados({
     case imc < 17:
       res = "Muito abaixo do peso";
       break;
-    case imc < 18.49:
+    case imc < 18.4:
       res = "Abaixo do peso";
       break;
-    case imc < 24.99:
+    case imc < 24.9:
       res = "Peso normal";
       break;
-    case imc < 29.99:
+    case imc < 29.9:
       res = "Acima do peso";
       break;
-    case imc < 34.99:
+    case imc < 34.9:
       res = "Obesidade I";
       break;
-    case imc < 39.99:
+    case imc < 39.9:
       res = "Obesidade II (severa)";
       break;
     case imc > 40:
@@ -34,7 +34,7 @@ export default function Dados({
   }
 
   return (
-    <>
+    <section className="grid">
       <div className="border-b border-[#E85B81] grid grid-cols-4">
         <p>Peso</p>
         <p>Altura</p>
@@ -47,6 +47,6 @@ export default function Dados({
         <p>{imc}</p>
         <p>{res}</p>
       </div>
-    </>
+    </section>
   );
 }
