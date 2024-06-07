@@ -24,7 +24,7 @@ export default function Home() {
               type="number"
               placeholder="kg"
               onChange={(event) => setPeso(Number(event.currentTarget.value))}
-              className="border border-[#E85B81] rounded-md h-10 px-5 outline-none"
+              className="border border-[#E85B81] rounded-md h-10 px-5 outline-none text-black"
             />
           </div>
 
@@ -34,7 +34,7 @@ export default function Home() {
               type="number"
               placeholder="m"
               onChange={(event) => setAltura(Number(event.currentTarget.value))}
-              className="border border-[#E85B81] rounded-md h-10 px-5 outline-none"
+              className="border border-[#E85B81] rounded-md h-10 px-5 outline-none text-black"
             />
           </div>
         </div>

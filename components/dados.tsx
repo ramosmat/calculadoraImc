@@ -35,13 +35,13 @@ export default function Dados({
 
   return (
     <section className="grid">
-      <div className="border-b border-[#E85B81] grid grid-cols-4">
+      <div className="border-b border-[#E85B81] grid grid-cols-4 text-black">
         <p>Peso</p>
         <p>Altura</p>
         <p>IMC</p>
         <p>Resultado</p>
       </div>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-4 text-black">
         <p>{peso}</p>
         <p>{altura}</p>
         <p>{imc}</p>

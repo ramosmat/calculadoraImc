@@ -11,7 +11,7 @@ export default function Inputs({
       <input
         type="number"
         placeholder={place}
-        className="border border-[#E85B81] rounded-md h-10 px-5 outline-none"
+        className="border border-[#E85B81] rounded-md h-10 px-5 outline-none text-black"
       />
     </div>
   );
