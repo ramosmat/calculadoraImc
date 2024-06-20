@@ -72,8 +72,8 @@ const App = () => {
   }
 
   return (
-    <div className="flex justify-center h-[100vh] items-center bg-slate-200 px-5">
-      <div className="py-14 px-5 bg-[#F3F3F3] flex flex-col gap-4 w-[450px] rounded-md">
+    <div className="flex justify-center h-screen items-center bg-slate-200 px-5">
+      <div className="py-14 max-[400px]:py-2 px-5 bg-[#F3F3F3] flex flex-col gap-4 w-[450px] rounded-md">
         {/* Inputs */}
         <section className="flex flex-col gap-2">
           <Input
@@ -95,14 +95,10 @@ const App = () => {
         </section>
 
         {/* Dados */}
-        <section className="min-h-[85px] my-auto grid">
-          <Dados dados={dados} />
-        </section>
+        <Dados dados={dados} />
 
         {/* Tabela */}
-        <section className="min-h-[85px]">
-          <Tabela />
-        </section>
+        <Tabela />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 const Tabela = () => {
   return (
     <div className="grid grid-cols-2">
-      <ul className="flex flex-col justify-center ">
+      <ul className="flex flex-col justify-center text-start max-[400px]:text-sm">
         <p className="text-[#E85B81] font-bold mb-1">IMC</p>
         <li>Menos de 17</li>
         <li>Entre 17 e 18,49</li>
@@ -14,7 +14,7 @@ const Tabela = () => {
         <li>Acima de 40</li>
       </ul>
 
-      <ul className="flex flex-col justify-center text-end ">
+      <ul className="flex flex-col justify-center text-end max-[400px]:text-sm">
         <p className="text-[#E85B81] font-bold mb-1">Classificação</p>
         <li>Muito abaixo do peso</li>
         <li>Abaixo do peso</li>
