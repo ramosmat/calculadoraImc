@@ -1,0 +1,24 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+ul li:nth-child(odd) {
+  background: #e2e8f0;
+}
+
+ul li {
+  display: block;
+  font-weight: 500;
+  color: #505050;
+}
+
+@media (width <= 400px) {
+  ul li {
+    min-height: 50px;
+  }
+}
