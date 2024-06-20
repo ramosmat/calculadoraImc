@@ -17,7 +17,7 @@ ul li {
   color: #505050;
 }
 
-@media (width <= 400px) {
+@media (width <= 360px) {
   ul li {
     min-height: 50px;
   }
