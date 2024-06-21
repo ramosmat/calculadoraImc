@@ -7,18 +7,21 @@ input[type='number']::-webkit-outer-spin-button {
   appearance: none;
 }
 
-ul li:nth-child(odd) {
+div ul:nth-child(even) {
   background: #e2e8f0;
 }
 
 ul li {
-  display: block;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   color: #505050;
 }
 
-@media (width <= 360px) {
-  ul li {
-    min-height: 50px;
-  }
+ul li:first-child {
+  text-align: left;
+}
+
+ul li:last-child {
+  text-align: right;
 }
